@@ -16,9 +16,6 @@ code {
 .text-second{
   color: #858585;
 }
-.border-main{
-  border-color: #ffc107 !important;
-}
 .foo-hover:hover{
   color: white !important;
 }

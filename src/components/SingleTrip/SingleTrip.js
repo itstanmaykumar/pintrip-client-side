@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import useAuth from '../../hooks/useAuth';
 
 const SingleTrip = () => {
+    const { user } = useAuth();
+
     const {tripId} = useParams();
     const [singleTrip, setSingleTrip] = useState([]);
 
@@ -38,6 +41,27 @@ const SingleTrip = () => {
                     <span className="text-second text-center d-block mt-3 fw-bolder fs-4">{gName}</span>
                     <p className="text-warning text-center fs-6">{exp}+ Years of Experience</p>
                 </div>
+                <form className="bg-light rounded-20 p-5 mt-5">
+                    <h3 className="mt-4 mb-0">Please Fill This Form</h3>
+                    <small className="text-warning d-block mb-3">You Must Fill Up This Form To Book This Trip</small>
+                    <div className="my-4">
+                        <label htmlFor="name" className="form-label">Your Full Name</label>
+                        <input type="text" className="form-control" id="name" value={user.displayName} disabled />
+                    </div>
+                    <div className="my-4">
+                        <label htmlFor="email" className="form-label">Your Email Address</label>
+                        <input type="email" className="form-control" id="email" value={user.email} disabled />
+                    </div>
+                    <div className="my-4">
+                        <label htmlFor="phone" className="form-label">Your Phone Number</label>
+                        <input type="number" className="form-control" id="phone" required />
+                    </div>
+                    <div className="my-4">
+                        <label htmlFor="booktime" className="form-label">Your Suitable Date</label>
+                        <input type="date" className="form-control" id="booktime" required />
+                    </div>
+                    <button type="submit" className="btn btn-warning mt-4">Book This Package</button>
+                </form>
             </div>
         </div>
     );
