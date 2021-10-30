@@ -7,7 +7,7 @@ const PrivateRoute = ({ children, ...rest}) => {
 
     if(isLoading){
         return (
-            <div className="d-flex justify-content-center text-main">
+            <div className="d-flex justify-content-center text-warning">
                 <h1>Loading.....</h1>
                 <div className="mt-2 ms-2 spinner-border" role="status">
                     <span className="sr-only">Loading...</span>

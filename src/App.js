@@ -5,13 +5,13 @@ import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import About from './components/About/About';
 import Trips from './components/Trips/Trips';
-import TripDetails from './components/TripDetails/TripDetails';
 import Join from './components/Join/Join';
 import Footer from './components/Footer/Footer';
 import Contact from './components/Contact/Contact';
 import NotFound from './components/NotFound/NotFound';
 import AuthProvider from "./contexts/AuthProvider";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+import SingleTrip from "./components/SingleTrip/SingleTrip";
 
 function App() {
   return (
@@ -26,12 +26,12 @@ function App() {
               <Route exact path="/home">
                 <Home></Home>
               </Route>
-              <PrivateRoute exact path="/trips">
+              <Route exact path="/trips">
                 <Trips></Trips>
-              </PrivateRoute>
-              <Route exact path="/trips/:tripId">
-                <TripDetails></TripDetails>
               </Route>
+              <PrivateRoute exact path="/trips/:tripId">
+                <SingleTrip></SingleTrip>
+              </PrivateRoute>
               <Route exact path="/about">
                 <About></About>
               </Route>
