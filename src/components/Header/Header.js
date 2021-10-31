@@ -34,6 +34,11 @@ const Header = () => {
                         <li className="nav-item me-2">
                             <Link className="nav-link" to="/contact">Connect</Link>
                         </li>
+                        <li className="nav-item me-2">
+                            {
+                                user?.email && (<Link className="nav-link" to="/mycart">My Cart</Link>)
+                            }
+                        </li>
                         <li className="me-5"></li>
 
                         {user?.email ? (

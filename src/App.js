@@ -12,6 +12,7 @@ import NotFound from './components/NotFound/NotFound';
 import AuthProvider from "./contexts/AuthProvider";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import SingleTrip from "./components/SingleTrip/SingleTrip";
+import MyCart from "./components/MyCart/MyCart";
 
 function App() {
   return (
@@ -37,6 +38,9 @@ function App() {
               </Route>
               <PrivateRoute exact path="/contact">
                 <Contact></Contact>
+              </PrivateRoute>
+              <PrivateRoute exact path="/mycart">
+                <MyCart></MyCart>
               </PrivateRoute>
               <Route exact path="/join">
                 <Join></Join>

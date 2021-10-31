@@ -17,6 +17,14 @@ const SingleTrip = () => {
         .then(data => setSingleTrip(data))
     },[])
 
+    const [carts, setCarts] = useState([]);
+
+    useEffect(() =>{
+        fetch("https://infinite-harbor-27081.herokuapp.com/bookedTrip")
+        .then(res => res.json())
+        .then(data => setCarts(data))
+    },[]);
+
     const refAdd = useRef();
     const refDate = useRef();
     const history = useHistory();
@@ -27,13 +35,14 @@ const SingleTrip = () => {
         const address = refAdd.current.value;
         const date = refDate.current.value;
         const status = false;
-        const cart = { title, cost, name, email, address, date, status };
+        const id = carts.length;
+        const cart = { id, title, cost, name, email, address, date, status };
 
-        axios.post("http://localhost:5000/bookedTrip",cart)
+        axios.post("https://infinite-harbor-27081.herokuapp.com/bookedTrip",cart)
         .then(res => {
             if(res.data.insertedId){
                 alert("Trip Booked Suceessfully!!");
-                history.push("/myCart");
+                history.push("/mycart");
             }
         })
         e.preventDefault();
