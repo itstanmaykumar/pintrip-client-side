@@ -35,9 +35,9 @@ function App() {
               <Route exact path="/about">
                 <About></About>
               </Route>
-              <Route exact path="/contact">
+              <PrivateRoute exact path="/contact">
                 <Contact></Contact>
-              </Route>
+              </PrivateRoute>
               <Route exact path="/join">
                 <Join></Join>
               </Route>

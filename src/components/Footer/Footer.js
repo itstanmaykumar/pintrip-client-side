@@ -18,7 +18,7 @@ const Footer = () => {
                         <Link className="text-decoration-none d-block text-second foo-hover" to="/career">Career</Link>
                     </div>
                     <div className="mt-4 mb-3 text-white col-lg-3 col-sm-6 order-lg-3 order-xs-1">
-                        <h6 className="mb-2 text-white"><span className="border-2 border-bottom border-main">Connect Wi</span>th Us</h6>
+                        <h6 className="mb-2 text-white"><span className="border-2 border-bottom border-warning">Connect Wi</span>th Us</h6>
                         <div className="my-2 d-flex text-second">
                             <small className="col-1"><i className="text-white fas fa-map-marker-alt"></i></small>
                             <small>12, Jhankar Mahbub Street,<br/>Programming Hero, Bangladesh</small>
@@ -27,7 +27,7 @@ const Footer = () => {
                             <small className="col-1"><i className="text-white fas fa-phone-alt"></i></small>
                             <small>999, +88012345</small>
                         </div>
-                        <h6 className="mt-3 mb-3 text-white"><span className="border-2 border-bottom border-main">Download O</span>ur App</h6>
+                        <h6 className="mt-3 mb-3 text-white"><span className="border-2 border-bottom border-warning">Download O</span>ur App</h6>
                         <div className="row justify-content-between pe-5">
                             <Link className="pb-3 d-block pe-xl-5 pe-lg-0 pe-md-5 pe-5" to="/playstore">
                                 <img className="w-100 pe-5 pe-sm-0" src={playstore} alt="android" />

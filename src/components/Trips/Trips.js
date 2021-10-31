@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import BookSteps from '../BookSteps/BookSteps';
 import TripDetails from '../TripDetails/TripDetails';
 
 const About = () => {
@@ -13,6 +14,10 @@ const About = () => {
 
     return (
         <div>
+            <BookSteps></BookSteps>
+            <section className="container mt-2 mb-5 text-center">
+                <div></div>
+            </section>
             <section className="container mt-2 mb-5 text-center">
                 <h3 className="mt-5 fw-bolder">Package Trips</h3>
                 <p className="pb-3 col-12 text-second">Explore The Various Trips We Offer And Find Your Suitable Trip!</p>

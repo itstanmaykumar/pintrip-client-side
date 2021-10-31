@@ -26,10 +26,7 @@ const Header = () => {
                             </span>
                         </li>
                         <li className="nav-item me-2">
-                            <Link className="nav-link" to="/trips">Find Trips</Link>
-                        </li>
-                        <li className="nav-item me-2">
-                            <Link className="nav-link" to="/blogs">Blogs</Link>
+                            <Link className="nav-link" to="/trips">Book Trips</Link>
                         </li>
                         <li className="nav-item me-2">
                             <Link className="nav-link" to="/about">About</Link>
