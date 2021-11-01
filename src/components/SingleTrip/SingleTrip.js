@@ -17,14 +17,6 @@ const SingleTrip = () => {
         .then(data => setSingleTrip(data))
     },[])
 
-    const [carts, setCarts] = useState([]);
-
-    useEffect(() =>{
-        fetch("https://infinite-harbor-27081.herokuapp.com/bookedTrip")
-        .then(res => res.json())
-        .then(data => setCarts(data))
-    },[]);
-
     const refAdd = useRef();
     const refDate = useRef();
     const history = useHistory();
@@ -41,7 +33,7 @@ const SingleTrip = () => {
         .then(res => {
             if(res.data.insertedId){
                 alert("Trip Booked Suceessfully!!");
-                history.push("/mycart");
+                history.push("/mytrip");
             }
         })
         e.preventDefault();
@@ -60,7 +52,7 @@ const SingleTrip = () => {
                 <div className="pt-3">
                     <p className="mb-0 text-second"><i className="pe-2 fas fa-location-arrow"></i> {duration} Days Trip</p>
                     <p className="my-0"><span className="text-second">Person: </span><span className="ps-2 fw-bolder">{person}</span><span className="ms-5"><span className="text-second">Group SIze: </span><span className="ps-2 fw-bolder">Max {group}</span></span></p>
-                    <h5 className="mt-2 text-second">Cost: <span className="ps-3 fw-bolder text-warning">$ {cost}k</span></h5>
+                    <h5 className="mt-2 text-second">Cost: <span className="ps-3 text-warning">$ {cost}k</span></h5>
                 </div>
                 <h3 className="mt-5">Accomodations</h3>
                 <small className="mb-5 d-block fw-light">{accommodations}</small>
@@ -68,7 +60,7 @@ const SingleTrip = () => {
                 <small className="mb-5 d-block fw-light">{transportation}</small>
                 <h3 className="mt-4">Tour Guide</h3>
                 <div className="col-lg-2 col-md-4 col-6">
-                    <img className="mt-4 shadow rounded-circle d-block w-100" src={gImg} alt="guide imge" />
+                    <img className="mt-4 shadow rounded-20 d-block w-100" src={gImg} alt="guide imge" />
                     <span className="mt-3 text-center text-second d-block fw-bolder fs-4">{gName}</span>
                     <p className="text-center text-warning fs-6">{exp}+ Years of Experience</p>
                 </div>

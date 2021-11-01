@@ -3,6 +3,7 @@ import TripItem from '../TripItem/TripItem';
 import Services from '../Services/Services';
 import Banner from '../Banner/Banner';
 import Newsletter from '../Newsletter/Newsletter';
+import Testimonial from '../Testimonial/Testimonial';
 
 const Home = () => {
     const [trips, setTrips] = useState([]);
@@ -40,6 +41,7 @@ const Home = () => {
                 </div>
             </section>
             <Newsletter></Newsletter>
+            <Testimonial></Testimonial>
         </div>
     );
 };

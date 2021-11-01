@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
-const MyCart = () => {
+const MyTrip = () => {
     const { user } = useAuth();
     const [carts, setCarts] = useState([]);
 
@@ -45,9 +45,9 @@ const MyCart = () => {
                                     <h5 className="text-warning">Booked By: </h5>
                                     <div className="p-2 mb-2">
                                         <h6>{cart.name}</h6>
-                                        <small className="d-block my-0 fw-light text-second"><i className="pe-1 fas fa-envelope"></i> {cart.email}</small>
-                                        <small className="d-block my-0 fw-light text-second"><i className="pe-2 fas fa-map-marker-alt"></i> {cart.address}</small>
-                                        <small className="d-block my-0 fw-light text-second"><i className="pe-2 fas fa-calendar-check"></i> {cart.date}</small>
+                                        <small className="my-0 d-block fw-light text-second"><i className="pe-1 fas fa-envelope"></i> {cart.email}</small>
+                                        <small className="my-0 d-block fw-light text-second"><i className="pe-2 fas fa-map-marker-alt"></i> {cart.address}</small>
+                                        <small className="my-0 d-block fw-light text-second"><i className="pe-2 fas fa-calendar-check"></i> {cart.date}</small>
                                     </div>
                                     {
                                             cart.status ? 
@@ -56,7 +56,7 @@ const MyCart = () => {
                                             ( <p>Satus: <span className="py-0 ms-3 btn btn-danger">Pending</span></p> )
                                     }
                                     <div className="mt-4">
-                                        <Link onClick={() => cancelBooking(cart._id)} className="btn btn-warning" to="/mycart">Cancel Booking</Link>
+                                        <Link onClick={() => cancelBooking(cart._id)} className="btn btn-warning" to="/mytrip">Cancel Booking</Link>
                                     </div>
                                 </div>
                             </div>
@@ -68,4 +68,4 @@ const MyCart = () => {
     );
 };
 
-export default MyCart;
+export default MyTrip;

@@ -32,7 +32,7 @@ const ManageBooking = () => {
             axios.delete(url)
             .then(res => {
                 if (res.data.deletedCount) {
-                    alert("Booking Cancelled Successfully!!");
+                    alert("Booking Deleted Successfully!!");
                     const remainingBooking = carts.filter(cart=> cart._id !== id);
                     setCarts(remainingBooking);
                 }

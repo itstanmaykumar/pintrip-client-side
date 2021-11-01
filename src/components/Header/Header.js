@@ -36,7 +36,7 @@ const Header = () => {
                         </li>
                         <li className="nav-item me-2">
                             {
-                                user?.email && (<Link className="nav-link" to="/mycart">My Cart</Link>)
+                                user?.email && (<Link className="nav-link" to="/mytrip">My Trip</Link>)
                             }
                         </li>
                         <li className="nav-item me-2">
@@ -44,7 +44,7 @@ const Header = () => {
                                 user?.email && (<Link className="nav-link" to="/admin">Admin</Link>)
                             }
                         </li>
-                        <li className="me-4 mb-2"></li>
+                        <li className="mb-2 me-4"></li>
 
                         {user?.email ? (
                             <li className="nav-item" onClick={logOut}>
