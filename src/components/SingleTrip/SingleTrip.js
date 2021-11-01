@@ -35,8 +35,7 @@ const SingleTrip = () => {
         const address = refAdd.current.value;
         const date = refDate.current.value;
         const status = false;
-        const id = carts.length;
-        const cart = { id, title, cost, name, email, address, date, status };
+        const cart = { title, img, cost, name, email, address, date, status };
 
         axios.post("https://infinite-harbor-27081.herokuapp.com/bookedTrip",cart)
         .then(res => {

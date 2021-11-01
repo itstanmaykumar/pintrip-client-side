@@ -12,7 +12,12 @@ const Newsletter = () => {
                         <h2>Connect With Us</h2>
                         <p className="text-warning">Get Notified Upon New Updates or Offers</p>
                         <form className="mt-5 mb-4 me-5 pe-5">
-                            <input className="form-control" type="email" name="email" id="email" placeholder={user.email} />
+                            {
+                                user.email?
+                                (<input className="form-control" type="email" name="email" id="email" placeholder={user.email} disabled/>)
+                                :
+                                (<input className="form-control" type="email" name="email" id="email" defaultValue={user.email} />)
+                            }
                         </form>
                         <Link className="mb-4 btn btn-warning" to="/subscribed">Subscribe</Link>
                     </div>

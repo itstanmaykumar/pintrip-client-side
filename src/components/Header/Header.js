@@ -39,7 +39,12 @@ const Header = () => {
                                 user?.email && (<Link className="nav-link" to="/mycart">My Cart</Link>)
                             }
                         </li>
-                        <li className="me-5"></li>
+                        <li className="nav-item me-2">
+                            {
+                                user?.email && (<Link className="nav-link" to="/admin">Admin</Link>)
+                            }
+                        </li>
+                        <li className="me-4 mb-2"></li>
 
                         {user?.email ? (
                             <li className="nav-item" onClick={logOut}>

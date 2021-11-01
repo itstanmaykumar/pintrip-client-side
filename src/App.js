@@ -13,6 +13,8 @@ import AuthProvider from "./contexts/AuthProvider";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import SingleTrip from "./components/SingleTrip/SingleTrip";
 import MyCart from "./components/MyCart/MyCart";
+import Admin from "./components/Admin/Admin";
+import ManageBooking from "./components/ManageBooking/ManageBooking";
 
 function App() {
   return (
@@ -41,6 +43,12 @@ function App() {
               </PrivateRoute>
               <PrivateRoute exact path="/mycart">
                 <MyCart></MyCart>
+              </PrivateRoute>
+              <PrivateRoute exact path="/admin">
+                <Admin></Admin>
+              </PrivateRoute>
+              <PrivateRoute exact path="/managebooking">
+                <ManageBooking></ManageBooking>
               </PrivateRoute>
               <Route exact path="/join">
                 <Join></Join>
